@@ -35,6 +35,8 @@
 .left-button {
   background-color: white;
   padding: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: 20px;
   font-family: ColfaxAI, Helvetica, sans-serif;
   font-size: 13px;
