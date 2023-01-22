@@ -1,0 +1,65 @@
+.wrapper-opener {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  max-width: 1490px;
+}
+
+.title-header {
+  font-size: 2.25rem;
+  line-height: 1.05;
+  letter-spacing: -0.0175em;
+  font-family: Charter, Georgia, serif;
+  color: white;
+  width: 600px;
+  margin-left: 2.45rem;
+}
+
+.button-box {
+  margin-left: 2.45rem;
+  display: flex;
+  align-items: center;
+}
+
+.left-button {
+  background-color: white;
+  padding: 10px;
+  margin-right: 20px;
+  font-family: ColfaxAI, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  line-height: 1;
+  position: relative;
+  vertical-align: -3px;
+  border-radius: 3em;
+}
+
+.right-button {
+  font-family: ColfaxAI, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  line-height: 1;
+  position: relative;
+  vertical-align: -3px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
