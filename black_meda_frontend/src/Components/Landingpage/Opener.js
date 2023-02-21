@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Opener.module.css";
 
 const Opener = () => {
@@ -8,11 +9,11 @@ const Opener = () => {
           Tools um für die besser analyse der Wirtschaft.
         </h1>
         <div className={styles["button-box"]}>
-          <a href="" className={styles["left-button"]}>
+          <Link to="/liveFeed" className={styles["left-button"]}>
             Twitter Feed
-          </a>
+          </Link>
           <div className={styles['right-button']}>
-            <p>View Macros</p>
+            <Link to="/macro" >View Macros</Link>
           </div>
         </div>
       </div>

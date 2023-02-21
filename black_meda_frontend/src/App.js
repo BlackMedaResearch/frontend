@@ -1,15 +1,16 @@
-import video from "./assets/videos/backround.mp4";
-import styles from "./App.module.css";
-import Header from "./Components/UI/header/header";
-import Opener from "./Components/Landingpage/Opener";
-function App() {
-  return (
-    <div className={styles["wrapper"]}>
-      <Header/>
-      <video className={styles['backround-video']} src={video} autoPlay loop muted/>
-      <Opener/>
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
 
-    </div>
-  );
+import Home from "./Pages/Landingpage/Home"
+import Twitter from "./Pages/LiveFeed"
+import Macros from "./Pages/Macros";
+import Void from "./Pages/Void/Void";
+
+const routes = [{path:"/", element:<Home/>},{path:"/liveFeed", element:<Twitter/>},{path:"/macro", element:<Macros/>},{path:"/void", element:<Void/>},{path:"/vc"}]
+
+const router = createBrowserRouter(routes)
+
+
+function App() {
+  return <RouterProvider router={router}/>
 }
 export default App;

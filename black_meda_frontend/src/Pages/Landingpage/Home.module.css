@@ -1,0 +1,14 @@
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.backround-video {
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+}
+
