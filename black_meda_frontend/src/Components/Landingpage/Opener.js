@@ -13,7 +13,7 @@ const Opener = () => {
             Twitter Feed
           </Link>
           <div className={styles['right-button']}>
-            <Link to="/macro" >View Macros</Link>
+            <Link to="/macro" className={styles.link} >View Macros</Link>
           </div>
         </div>
       </div>

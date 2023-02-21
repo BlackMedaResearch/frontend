@@ -1,0 +1,11 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+.video-wrapper {
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+}
