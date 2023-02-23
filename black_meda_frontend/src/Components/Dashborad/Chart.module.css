@@ -1,0 +1,7 @@
+.wrapper-chart{
+    width: 400px;
+    height: 300px;
+    border: solid red;
+    overflow: hidden;
+    margin: 10px;
+}
