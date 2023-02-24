@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Chart from "../Components/Dashborad/Chart";
-import Dropdown from "../Components/Dashborad/Dropdown";
-
+import Chart from "../../Components/Dashborad/Chart";
+import Dropdown from "../../Components/Dashborad/Dropdown";
+import styles from "./Macros.module.css";
+import Header from "../../Components/UI/header/header";
 const Macros = () => {
   const [country, setCountry] = useState("Sweden");
   const apikey = "d476e9f2148948a:hl66xsc1fpl48t8";
@@ -18,8 +19,8 @@ const Macros = () => {
       apikey: apikey,
       name: "Inflation",
       delay: 0,
-      nation : country,
-      test: "https://api.tradingeconomics.com/historical/country/Mexico/indicator/Inflation%20Rate?c=d476e9f2148948a:hl66xsc1fpl48t8"
+      nation: country,
+      test: "https://api.tradingeconomics.com/historical/country/Mexico/indicator/Inflation%20Rate?c=d476e9f2148948a:hl66xsc1fpl48t8",
     },
     {
       country: `/country/${country}`,
@@ -27,8 +28,8 @@ const Macros = () => {
       url: "https://api.tradingeconomics.com/historical",
       apikey: apikey,
       name: "GDP Growth",
-      delay: 2000,
-      nation : country
+      delay: 700,
+      nation: country,
     },
     {
       country: `/country/${country}`,
@@ -36,8 +37,8 @@ const Macros = () => {
       url: "https://api.tradingeconomics.com/historical",
       apikey: apikey,
       name: "Arbeitslosenrate",
-      delay: 4000,
-      nation : country
+      delay: 1400,
+      nation: country,
     },
     {
       country: `/country/${country}`,
@@ -45,8 +46,8 @@ const Macros = () => {
       url: "https://api.tradingeconomics.com/historical",
       apikey: apikey,
       name: "Zinsrate",
-      delay: 6000,
-      nation : country
+      delay: 2100,
+      nation: country,
     },
     {
       country: `/country/${country}`,
@@ -54,17 +55,25 @@ const Macros = () => {
       url: "https://api.tradingeconomics.com/historical",
       apikey: apikey,
       name: "Infaltion MoM",
-      delay: 8000,
-      nation : country
+      delay: 2800,
+      nation: country,
     },
   ];
 
   return (
-    <div>
+    <div className={styles.wrapper}>
+      <Header />
+      <div>
+        <video />
+      </div>
+
       <Dropdown getCountry={getCountry} />
-      {fetchdatato.map((chart) => (
-        <Chart indicator={chart} key={chart.name} />
-      ))}
+      <div className={styles["wrapper-graphs"]}>
+        
+        {fetchdatato.map((chart) => (
+          <Chart indicator={chart} key={chart.name} />
+        ))}
+      </div>
     </div>
   );
 };

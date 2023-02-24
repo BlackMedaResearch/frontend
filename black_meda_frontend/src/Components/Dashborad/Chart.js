@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
+import Loader from "./Loader";
+import Card from "../UI/helpers/Card";
 import styles from "./Chart.module.css";
 
 const Chart = (props) => {
   const [values, setValues] = useState([]);
-  const { country, indicator, url, apikey, delay, nation } = props.indicator;
+  const [loading, setLoading] = useState(false);
+  const { country, indicator, url, apikey, delay, nation, name } =
+    props.indicator;
 
   const URL = url + country + indicator + apikey;
 
@@ -21,17 +25,24 @@ const Chart = (props) => {
       console.log(data);
       const values = data.map((data) => data.Value);
       setValues(values);
+      setLoading(false);
     }, delay);
 
     try {
+      setLoading(true);
       data();
     } catch (error) {}
   }, [URL, delay]);
 
   return (
     <div className={styles["wrapper-chart"]}>
-      <p>chart {nation}</p>
-      {values}
+      <div className={styles["header-div"]}>
+        <h2 className={styles.header}>{name}</h2>
+      </div>
+      <div className={styles["chart-holder"]}>
+        {loading && <Loader />}
+        {!loading && values}
+      </div>
     </div>
   );
 };
