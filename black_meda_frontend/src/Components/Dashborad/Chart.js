@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
-import Card from "../UI/helpers/Card";
 import styles from "./Chart.module.css";
+
+
 
 const Chart = (props) => {
   const [values, setValues] = useState([]);

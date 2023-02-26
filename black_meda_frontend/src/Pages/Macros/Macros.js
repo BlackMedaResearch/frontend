@@ -3,6 +3,8 @@ import Chart from "../../Components/Dashborad/Chart";
 import Dropdown from "../../Components/Dashborad/Dropdown";
 import styles from "./Macros.module.css";
 import Header from "../../Components/UI/header/header";
+
+
 const Macros = () => {
   const [country, setCountry] = useState("Sweden");
   const apikey = "d476e9f2148948a:hl66xsc1fpl48t8";
@@ -28,7 +30,7 @@ const Macros = () => {
       url: "https://api.tradingeconomics.com/historical",
       apikey: apikey,
       name: "GDP Growth",
-      delay: 700,
+      delay: 800,
       nation: country,
     },
     {
@@ -37,7 +39,7 @@ const Macros = () => {
       url: "https://api.tradingeconomics.com/historical",
       apikey: apikey,
       name: "Arbeitslosenrate",
-      delay: 1400,
+      delay: 1600,
       nation: country,
     },
     {
@@ -46,7 +48,7 @@ const Macros = () => {
       url: "https://api.tradingeconomics.com/historical",
       apikey: apikey,
       name: "Zinsrate",
-      delay: 2100,
+      delay: 2400,
       nation: country,
     },
     {
@@ -55,7 +57,7 @@ const Macros = () => {
       url: "https://api.tradingeconomics.com/historical",
       apikey: apikey,
       name: "Infaltion MoM",
-      delay: 2800,
+      delay: 3200,
       nation: country,
     },
   ];
@@ -68,8 +70,8 @@ const Macros = () => {
       </div>
 
       <Dropdown getCountry={getCountry} />
+
       <div className={styles["wrapper-graphs"]}>
-        
         {fetchdatato.map((chart) => (
           <Chart indicator={chart} key={chart.name} />
         ))}
