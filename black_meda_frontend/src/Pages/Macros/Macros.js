@@ -3,11 +3,11 @@ import Chart from "../../Components/Dashborad/Chart";
 import Dropdown from "../../Components/Dashborad/Dropdown";
 import styles from "./Macros.module.css";
 import Header from "../../Components/UI/header/header";
+import ChartExample from "../../Components/Dashborad/ChartExample"
 
 
 const Macros = () => {
   const [country, setCountry] = useState("Sweden");
-  const apikey = "d476e9f2148948a:hl66xsc1fpl48t8";
 
   const getCountry = (country) => {
     setCountry(country);
@@ -18,7 +18,6 @@ const Macros = () => {
       country: `/country/${country}`,
       indicator: "/indicator/Inflation%20Rate?c=",
       url: "https://api.tradingeconomics.com/historical",
-      apikey: apikey,
       name: "Inflation",
       delay: 0,
       nation: country,
@@ -28,7 +27,6 @@ const Macros = () => {
       country: `/country/${country}`,
       indicator: "/indicator/GDP%20Growth%20Rate?c=",
       url: "https://api.tradingeconomics.com/historical",
-      apikey: apikey,
       name: "GDP Growth",
       delay: 800,
       nation: country,
@@ -37,7 +35,6 @@ const Macros = () => {
       country: `/country/${country}`,
       indicator: "/indicator/Unemployment%20Rate?c=",
       url: "https://api.tradingeconomics.com/historical",
-      apikey: apikey,
       name: "Arbeitslosenrate",
       delay: 1600,
       nation: country,
@@ -46,7 +43,6 @@ const Macros = () => {
       country: `/country/${country}`,
       indicator: "/indicator/Interest%20Rate?c=",
       url: "https://api.tradingeconomics.com/historical",
-      apikey: apikey,
       name: "Zinsrate",
       delay: 2400,
       nation: country,
@@ -55,7 +51,6 @@ const Macros = () => {
       country: `/country/${country}`,
       indicator: "/indicator/Inflation%20Rate%20MoM?c=",
       url: "https://api.tradingeconomics.com/historical",
-      apikey: apikey,
       name: "Infaltion MoM",
       delay: 3200,
       nation: country,
@@ -68,6 +63,7 @@ const Macros = () => {
       <div>
         <video />
       </div>
+      <ChartExample/>
 
       <Dropdown getCountry={getCountry} />
 

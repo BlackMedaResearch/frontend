@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import styles from "./Chart.module.css";
+import { Bar } from "react-chartjs-2";
 
 
 
 const Chart = (props) => {
   const [values, setValues] = useState([]);
   const [loading, setLoading] = useState(false);
-  const { country, indicator, url, apikey, delay, nation, name } =
+  const apikey = "d476e9f2148948a:hl66xsc1fpl48t8";
+  const { country, indicator, url, delay, nation, name } =
     props.indicator;
 
   const URL = url + country + indicator + apikey;
