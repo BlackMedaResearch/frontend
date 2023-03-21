@@ -18,7 +18,7 @@ const Header = () => {
             Void
           </Link>
           <Link to="/livefeed" className={styles["link-item"]}>
-            Twitter Feed
+            Finance News 
           </Link>
         </nav>
       </div>
