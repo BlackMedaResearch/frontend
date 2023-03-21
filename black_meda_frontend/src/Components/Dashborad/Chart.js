@@ -25,7 +25,6 @@ const Chart = (props) => {
       }
 
       const data = await response.json();
-      console.log(data);
       const values = data.map((data) => data.Value);
       setValues(values);
       setLoading(false);

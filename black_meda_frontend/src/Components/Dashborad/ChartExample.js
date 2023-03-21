@@ -37,7 +37,7 @@ const UserData = [
 const ChartExample = () => {
     const [userData,setUserData]= useState()
   return <div>
-      <Bar data={UserData} options={}/>
+      
   </div>;
 };
 
