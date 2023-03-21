@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 import logo from "../../../assets/images/Header/blackmedalogo.png";
@@ -26,4 +27,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);
