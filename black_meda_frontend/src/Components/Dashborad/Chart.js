@@ -8,6 +8,7 @@ import { Bar } from "react-chartjs-2";
 const Chart = (props) => {
   const [values, setValues] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error,setError] = useState(false)
   const apikey = "d476e9f2148948a:hl66xsc1fpl48t8";
   const { country, indicator, url, delay, nation, name } =
     props.indicator;
@@ -33,7 +34,9 @@ const Chart = (props) => {
     try {
       setLoading(true);
       data();
-    } catch (error) {}
+    } catch (error) {
+      setError(true)
+    }
   }, [URL, delay]);
 
   return (
@@ -44,6 +47,7 @@ const Chart = (props) => {
       <div className={styles["chart-holder"]}>
         {loading && <Loader />}
         {!loading && values}
+        {error && !loading && <p>Error beim Laden</p>}
       </div>
     </div>
   );

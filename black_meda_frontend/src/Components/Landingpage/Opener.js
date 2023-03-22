@@ -10,7 +10,7 @@ const Opener = () => {
         </h1>
         <div className={styles["button-box"]}>
           <Link to="/liveFeed" className={styles["left-button"]}>
-            Twitter Feed
+            Finance News
           </Link>
           <div className={styles['right-button']}>
             <Link to="/macro" className={styles.link} >View Macros</Link>
