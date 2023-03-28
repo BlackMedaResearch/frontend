@@ -9,7 +9,7 @@ const Opener = () => {
           Tools um für die besser analyse der Wirtschaft.
         </h1>
         <div className={styles["button-box"]}>
-          <Link to="/liveFeed" className={styles["left-button"]}>
+          <Link to="/finance_news" className={styles["left-button"]}>
             Finance News
           </Link>
           <div className={styles['right-button']}>

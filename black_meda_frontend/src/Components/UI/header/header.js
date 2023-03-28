@@ -18,7 +18,7 @@ const Header = () => {
           <Link to="/void" className={styles["link-item"]}>
             Void
           </Link>
-          <Link to="/livefeed" className={styles["link-item"]}>
+          <Link to="/finance_news" className={styles["link-item"]}>
             Finance News 
           </Link>
         </nav>
