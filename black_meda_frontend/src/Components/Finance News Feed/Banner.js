@@ -8,7 +8,7 @@ const Banner = () => {
       const url =
         "https://newsapi.org/v2/everything?" +
         "q=Apple&" +
-        "from=2023-02-28&" +
+        "from=2023-03-22&" +
         "sortBy=popularity&" +
         "apiKey=ccbd98fc4cf94220849d3a584343667f";
       const response = await fetch(url);
