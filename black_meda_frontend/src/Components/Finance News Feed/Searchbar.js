@@ -2,6 +2,13 @@ import styles from "./Searchbar.module.css"
 
 
 const Searchbar = () =>{
+    const keyDownHandler = (e) =>{
+        if (e.key === "Enter" || e.code === "Enter") {
+            
+        }
+        return
+    }
+   
     return(
         <div className={styles["searchbar-wrapper"]}>
    
@@ -14,7 +21,7 @@ const Searchbar = () =>{
                 </span>
             </div>
 
-            <input type="text" className={styles["searchbar-input"]} maxlength="2048" name="q" autocapitalize="off" autocomplete="off" title="Search" role="combobox" placeholder="Search for buzzwords"/>
+            <input type="text" className={styles["searchbar-input"]} maxlength="2048" name="q" autocapitalize="off" autocomplete="off" title="Search" role="combobox" placeholder="Search for buzzwords" onKeyDown={keyDownHandler}/>
         </div>
     )
 
