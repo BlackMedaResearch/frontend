@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
 import PageWrapper from "../../Components/UI/helpers/PageWrapper";
 import Banner from "../../Components/Finance News Feed/Banner";
+import HolderTopics from "../../Components/Finance News Feed/HolderTopics";
 import Header from "../../Components/UI/header/header";
-import styles from "./LiveFeed.module.css"
-
+import styles from "./LiveFeed.module.css";
 
 const LiveFeed = () => {
   return (
     <PageWrapper>
-      <div className={styles.Header}>
-        <Header />
-      </div>
-      <Banner/>
+      <Header />
+      <Banner />
+      <HolderTopics/>
     </PageWrapper>
   );
 };
