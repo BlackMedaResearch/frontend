@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Searchbar from "./Searchbar";
 import styles from "./Banner.module.css"
 
 const Banner = () => {
@@ -14,7 +15,7 @@ const Banner = () => {
       const response = await fetch(url);
       const data = await response.json();
       console.log(data.articles);
-      setFrontNews(data.articles.slice(0, 10));
+      setFrontNews(data.articles.slice(3,4));
       console.log(data);
     };
     fetchNewsApi();
@@ -23,10 +24,12 @@ const Banner = () => {
   return (
     <div className={styles["wrapper-banner"]}>
       {ForntNewsData.map((item) => (
-        <div>
-          <img src={item.urlToImage} />
+        <div className={styles["news-wrapper"]}>
+          <img src={item.urlToImage} className={styles.img}/>
+          <div className={styles.overlay}></div> 
         </div>
       ))}
+      <Searchbar/>
     </div>
   );
 };
