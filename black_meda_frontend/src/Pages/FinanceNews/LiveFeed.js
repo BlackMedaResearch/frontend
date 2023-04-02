@@ -3,6 +3,7 @@ import PageWrapper from "../../Components/UI/helpers/PageWrapper";
 import Banner from "../../Components/Finance News Feed/Banner";
 import HolderTopics from "../../Components/Finance News Feed/HolderTopics";
 import Header from "../../Components/UI/header/header";
+import ResultsSearch from "../../Components/Finance News Feed/ResultsSearch";
 import styles from "./LiveFeed.module.css";
 
 const LiveFeed = () => {
@@ -11,6 +12,7 @@ const LiveFeed = () => {
       <Header />
       <Banner />
       <HolderTopics/>
+      <ResultsSearch/>
     </PageWrapper>
   );
 };

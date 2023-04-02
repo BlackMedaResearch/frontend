@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Searchbar from "./Searchbar";
 import styles from "./Banner.module.css";
-import { dateString } from "./utils";
+import { dateString } from "../../store/utils";
 
 const Banner = () => {
   const [ForntNewsData, setFrontNews] = useState([]);

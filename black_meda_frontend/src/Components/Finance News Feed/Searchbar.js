@@ -32,7 +32,6 @@ const Searchbar = () => {
         autocapitalize="off"
         autocomplete="off"
         title="Search"
-        role="combobox"
         placeholder="Search for buzzwords"
         onKeyDown={keyDownHandler}
         ref={inputRef}
