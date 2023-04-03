@@ -4,6 +4,7 @@ import { dateString } from "./utils";
 const initalState = {
   searchquery: "Apple",
   date: dateString,
+  page: 1
 };
 
 const searchSlice = createSlice({

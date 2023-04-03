@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 
 const ResultsSearch = () =>{
     const dateString = useSelector((state) => state.search.date);
+    const pageInt = useSelector((state) => state.search.page)
     const searchquery = encodeURIComponent(useSelector((state)=> state.search.searchquery))
     const [results,setResults] = useState([])
     useEffect(() => {
@@ -12,7 +13,7 @@ const ResultsSearch = () =>{
             `q=${searchquery}&` +
             `from=${dateString}&` +
             "sortBy=popularity&" +
-            "page=2&" +
+            `page=${pageInt.toString()}&` +
             "apiKey=ccbd98fc4cf94220849d3a584343667f";
           const response = await fetch(url);
           const data = await response.json();
