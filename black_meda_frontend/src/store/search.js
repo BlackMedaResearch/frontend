@@ -14,6 +14,18 @@ const searchSlice = createSlice({
     updatesearchquery(state, action) {
       state.searchquery = action.payload;
     },
+    decreasePage(state){
+        if (state.page === 1) {
+            return
+        }
+        state.page = state.page - 1
+    },
+    increasePage(state){
+        if (state.page === 5) {
+            return
+        }
+        state.page = state.page + 1
+    }
   },
 });
 
