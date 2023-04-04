@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Searchbar from "./Searchbar";
-import styles from "./Banner.module.css";
+import styles from "./styles/Banner.module.css";
 import { dateString } from "../../store/utils";
 
 const Banner = () => {
