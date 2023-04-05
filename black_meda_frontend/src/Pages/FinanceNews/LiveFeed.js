@@ -5,6 +5,7 @@ import HolderTopics from "../../Components/Finance News Feed/HolderTopics";
 import Header from "../../Components/UI/header/header";
 import ResultsSearch from "../../Components/Finance News Feed/ResultsSearch";
 import styles from "./LiveFeed.module.css";
+import modal_news from "../../Components/UI/Modal/modal_news";
 
 const LiveFeed = () => {
   return (
@@ -13,6 +14,7 @@ const LiveFeed = () => {
       <Banner />
       <HolderTopics/>
       <ResultsSearch/>
+      <modal_news/>
     </PageWrapper>
   );
 };
