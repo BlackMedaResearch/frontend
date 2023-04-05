@@ -1,0 +1,23 @@
+.wrapper-hottopics{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: solid red;
+    margin-bottom: 10px;  
+}
+.holder-images{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    border: solid red;
+    align-items: center;
+    gap: 10px;
+}
+.video-wrapper{
+    z-index: 400;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
