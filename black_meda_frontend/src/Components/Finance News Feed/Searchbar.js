@@ -1,4 +1,4 @@
-import styles from "./Searchbar.module.css";
+import styles from "./styles/Searchbar.module.css";
 import { useRef } from "react";
 import { searchActions } from "../../store";
 import { useSelector, useDispatch } from "react-redux";

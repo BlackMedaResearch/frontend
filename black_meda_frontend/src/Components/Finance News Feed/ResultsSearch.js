@@ -30,7 +30,7 @@ const ResultsSearch = () => {
   return (
     <div className={styles["search-results-wrapper"]}>
       {results.map((item) => (
-        <News imgsrc={item.urlToImage} heading={item.title} />
+        <News urlToImage={item.urlToImage} title={item.title} url={item.url} source={item.source} publishedAt={item.publishedAt} description={item.description} content={item.content} author={item.author} />
       ))}
     </div>
   );

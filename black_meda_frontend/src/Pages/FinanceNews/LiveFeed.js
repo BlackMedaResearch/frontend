@@ -5,15 +5,16 @@ import HolderTopics from "../../Components/Finance News Feed/HolderTopics";
 import Header from "../../Components/UI/header/header";
 import ResultsSearch from "../../Components/Finance News Feed/ResultsSearch";
 import styles from "./LiveFeed.module.css";
-import ModalNews from "../../Components/UI/Modal/ModalNews";
+import Modal from "../../Components/UI/Modal/Modal";
 import { useSelector, useDispatch } from "react-redux";
-import { searchActions } from "../../store";
+import { modalActions } from "../../store";
+import NewsDetail from "../../Components/Finance News Feed/NewsDetail";
 
 const LiveFeed = () => {
   const dispatch = useDispatch();
-  const showModal = useSelector((state) => state.search.showNewsModal);
+  const showModal = useSelector((state) => state.modal.showModal);
   const ModalCloseHandler = () => {
-    dispatch(searchActions.updateShowNewsModal(false));
+    dispatch(modalActions.updateShowModal(false));
   };
   return (
     <PageWrapper>
@@ -21,8 +22,13 @@ const LiveFeed = () => {
       <Banner />
       <HolderTopics />
       <ResultsSearch />
-      {showModal && <ModalNews onClose={ModalCloseHandler} />}
+      {showModal && (
+        <Modal onClose={ModalCloseHandler}>
+          <NewsDetail />
+        </Modal>
+      )}
     </PageWrapper>
   );
 };
+
 export default LiveFeed;

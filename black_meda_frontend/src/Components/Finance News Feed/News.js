@@ -1,6 +1,6 @@
 import styles from "./styles/News.module.css";
 import { useDispatch } from "react-redux";
-import { searchActions } from "../../store";
+import { searchActions,modalActions } from "../../store";
 
 const News = (props) => {
   const dispatch = useDispatch();
@@ -18,13 +18,13 @@ const News = (props) => {
         urlToImage: props.urlToImage,
       })
     );
-    dispatch(searchActions.updateShowNewsModal(true));
+    dispatch(modalActions.updateShowModal(true));
   };
   return (
     <div className={styles["wrapper-news"]}>
-      <img src={props.imgsrc} className={styles["img-wrapper"]} alt="newspicture" />
+      <img src={props.urlToImage} className={styles["img-wrapper"]} alt="newspicture" />
       <div className={styles["info-wrapper"]}>
-        <h2 className={styles["heading"]}>{props.heading}</h2>
+        <h2 className={styles["heading"]}>{props.title}</h2>
       </div>
       <div className={styles["wrapper-show-more"]}>
         <button onClick={buttonClickHandler}>
