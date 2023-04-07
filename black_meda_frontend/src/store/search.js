@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { act } from "react-dom/test-utils";
 import { dateString } from "./utils";
 
 const initalState = {
@@ -55,5 +54,5 @@ const searchSlice = createSlice({
     }
   },
 });
-
+console.log(initalState.newsOBJ)
 export default searchSlice;
