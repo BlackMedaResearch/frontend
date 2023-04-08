@@ -1,3 +1,5 @@
+import { useSelector } from "react-redux";
+
 export const dateString = () => {
   // Create a new Date object for the current date and time
   const currentDate = new Date();
@@ -31,4 +33,14 @@ export const dateString = () => {
 
   console.log(formattedDate);
   return formattedDate;
+};
+
+export const maxPage = (totalResults) => {
+  let pageCount = 0;
+  if (totalResults >= 500) {
+    pageCount = 5;
+  } else {
+    pageCount = Math.ceil(totalResults/100)
+  }
+  return pageCount
 };

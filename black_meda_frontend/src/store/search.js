@@ -14,8 +14,9 @@ const initalState = {
     url: null,
     urlToImage: null,
   },
-  showNewsModal: false,
   page: 1,
+  totalResults: null,
+  maxPage: 5,
 };
 
 const searchSlice = createSlice({
@@ -32,7 +33,7 @@ const searchSlice = createSlice({
       state.page = state.page - 1;
     },
     increasePage(state) {
-      if (state.page === 5) {
+      if (state.page === state.maxPage) {
         return;
       }
       state.page = state.page + 1;
@@ -44,15 +45,18 @@ const searchSlice = createSlice({
         description: action.payload.description,
         publishedAt: action.payload.publishedAt,
         source: action.payload.source,
-        title: action.payload.source,
+        title: action.payload.title,
         url: action.payload.url,
         urlToImage: action.payload.urlToImage,
       };
     },
-    updateShowNewsModal(state,action){
-      state.showNewsModal = action.payload
+    getTotalresults(state, action) {
+      state.totalResults = action.payload;
+    },
+    setMaxPage(state,action){
+      state.maxPage = action.payload
     }
   },
 });
-console.log(initalState.newsOBJ)
+
 export default searchSlice;
