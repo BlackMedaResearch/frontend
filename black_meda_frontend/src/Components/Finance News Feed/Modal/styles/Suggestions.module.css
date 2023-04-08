@@ -1,0 +1,24 @@
+.wrapper-suggestions {
+  margin: 2rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+.header-suggestions {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  color: #fff;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+}
+.holder-suggestions {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+}
+.img {
+  height: 239px;
+  width: 425px;
+}
