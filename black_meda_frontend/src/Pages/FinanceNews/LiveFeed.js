@@ -3,12 +3,12 @@ import PageWrapper from "../../Components/UI/helpers/PageWrapper";
 import Banner from "../../Components/Finance News Feed/Banner";
 import HolderTopics from "../../Components/Finance News Feed/HolderTopics";
 import Header from "../../Components/UI/header/header";
-import ResultsSearch from "../../Components/Finance News Feed/ResultsSearch";
+import ResultsSearch from "../../Components/Finance News Feed/Resultssearch/ResultsSearch";
 import styles from "./LiveFeed.module.css";
 import Modal from "../../Components/UI/Modal/Modal";
 import { useSelector, useDispatch } from "react-redux";
 import { modalActions } from "../../store";
-import NewsDetail from "../../Components/Finance News Feed/NewsDetail";
+import NewsDetail from "../../Components/Finance News Feed/Modal/NewsDetail";
 
 const LiveFeed = () => {
   const dispatch = useDispatch();
