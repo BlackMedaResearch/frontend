@@ -20,7 +20,7 @@ const Banner = () => {
     };
     fetchNewsApi();
   }, [dateString]);
-
+  
   return (
     <div className={styles["wrapper-banner"]}>
       {ForntNewsData.map((item) => (
