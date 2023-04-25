@@ -33,17 +33,24 @@ const router2 = createBrowserRouter([
     ],
   },
   {
-    path: "/macro",
-    element: <Macros />,
-    //loader, action
-  },
-  {
-    path: "/finance_news",
-    element: <News />,
+    path: "",
+    element: <Root></Root>,
+    id: "finished_features",
+    children: [
+      {
+        path: "/macro",
+        element: <Macros />,
+        //loader, action
+      },
+      {
+        path: "/finance_news",
+        element: <News />,
+      },
+    ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router2} />;
 }
 export default App;
